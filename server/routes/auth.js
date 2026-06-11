@@ -12,7 +12,7 @@ const { sendOTPEmail } = require("../config/email");
 const cookieOptions = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
-  sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
+   sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
@@ -234,6 +234,8 @@ router.post("/login/verify-otp", async (req, res) => {
 router.post("/logout", (req, res) => {
   res.cookie("token", "", {
     httpOnly: true,
+    secure: true,
+    sameSite: "none",
     expires: new Date(0),
   });
   res.status(200).json({ message: "Logged out successfully" });
