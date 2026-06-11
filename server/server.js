@@ -12,13 +12,18 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: function(origin, callback) {
-    if (!origin || origin.startsWith('http://localhost')) {
-      callback(null, true)
+    const allowedOrigins = [
+      "http://localhost:5173",
+      process.env.CLIENT_URL,
+    ];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'))
+      callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true, // ← allows cookies
+  credentials: true,
 }));
 
 app.use(express.json());
