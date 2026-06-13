@@ -45,7 +45,6 @@ export default function Dashboard() {
   };
 
   return (
-   return (
     <div className="flex min-h-screen bg-zinc-950">
       <Sidebar />
 

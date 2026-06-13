@@ -59,7 +59,7 @@ export default function Landing() {
           Content<span className="text-zinc-400">Craft</span>
         </h1>
         <div className="flex items-center gap-2 lg:gap-4">
-          
+          <a
             href="#pricing"
             className="hidden sm:block text-zinc-400 hover:text-white text-sm transition-colors"
           >
