@@ -45,11 +45,12 @@ export default function Dashboard() {
   };
 
   return (
+   return (
     <div className="flex min-h-screen bg-zinc-950">
       <Sidebar />
 
       {/* Main Content */}
-      <main className="ml-64 flex-1 p-8">
+      <main className="w-full lg:ml-64 flex-1 p-4 lg:p-8 pt-16 lg:pt-8">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="mb-8">

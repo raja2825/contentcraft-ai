@@ -35,9 +35,10 @@ export default function History() {
   const toneLabels = { professional: "💼 Professional", casual: "😊 Casual", funny: "😂 Funny", "gen-z": "🔥 Gen-Z" };
 
   return (
+    return (
     <div className="flex min-h-screen bg-zinc-950">
       <Sidebar />
-      <main className="ml-64 flex-1 p-8">
+      <main className="w-full lg:ml-64 flex-1 p-4 lg:p-8 pt-16 lg:pt-8">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-white">History</h1>
